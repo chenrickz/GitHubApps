@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue"
+    tools:context=".Activity.DetailUserActivity">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivDetailUserAvatar"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:elevation="2dp"
+        app:civ_circle_background_color="@android:color/darker_gray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvDetailName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily=""
+        android:textColor="@color/blackPrimary"
+        android:textSize="19sp"
+        app:layout_constraintStart_toEndOf="@+id/ivDetailUserAvatar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvDetailUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily=""
+        android:textColor="@color/blackPrimary"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/ivDetailUserAvatar"
+        app:layout_constraintTop_toBottomOf="@+id/tvDetailName" />
+
+    <TextView
+        android:id="@+id/tvDetailCompany"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily=""
+        android:textColor="@color/blackPrimary"
+
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/ivCompany"
+        app:layout_constraintTop_toBottomOf="@+id/ivDetailUserAvatar" />
+
+    <ImageView
+        android:id="@+id/ivCompany"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivDetailUserAvatar"
+        app:srcCompat="@drawable/ic_baseline_company_24" />
+
+    <TextView
+        android:id="@+id/tvDetailLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily=""
+        android:textColor="@color/blackPrimary"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/ivLocation"
+        app:layout_constraintTop_toBottomOf="@+id/tvDetailCompany" />
+
+    <ImageView
+        android:id="@+id/ivLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivCompany"
+        app:srcCompat="@drawable/ic_baseline_location_on_24" />
+
+    <TextView
+        android:id="@+id/tvDetailBlog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily=""
+        android:textColor="@color/blackPrimary"
+        android:textSize="14sp"
+        android:autoLink="web"
+        app:layout_constraintStart_toEndOf="@+id/ivLink"
+        app:layout_constraintTop_toBottomOf="@+id/tvDetailLocation" />
+
+    <ImageView
+        android:id="@+id/ivLink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivLocation"
+        app:srcCompat="@drawable/ic_baseline_link_24" />
+
+    <TextView
+        android:id="@+id/tvDetailUserFollowingFollowers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:textAllCaps="true"
+        android:textColor="@color/blackPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDetailBlog" />
+
+    <TextView
+        android:id="@+id/tvDetailUserBio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textAllCaps="true"
+        android:textColor="@color/blackPrimary"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDetailUserFollowingFollowers" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@color/blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDetailUserFollowingFollowers"
+        app:tabIndicatorColor="@color/colorPrimary"
+        app:tabTextColor="@android:color/white" />
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/white_smoke"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tabs"
+        app:layout_constraintTop_toBottomOf="@id/tabs" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

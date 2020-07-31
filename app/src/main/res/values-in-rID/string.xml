@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GitHub App</string>
+
+    <string name="image_search">Tekan Ini Untuk Memulai Pencarian</string>
+    <string name="titleSearch">Aplikasi Pencarian Github</string>
+    <string name="not_found">Pengguna tidak ditemukan</string>
+    <string name="followers">Pengikut</string>
+    <string name="following">Mengikuti</string>
+    <string name="titleDetail">Detail Pengguna</string>
+
+    <string name="search_username">Cari Nama Pengguna</string>
+    <string name="gambar_pencarian">Pencarian gambar</string>
+    <string name="search_your_github_developer">Cari Pengembang Github Anda</string>
+    <string name="belum_ada_followers">Tidak ada pengikut</string>
+    <string name="belum_ada_following">Tidak Ada yang Mengikuti</string>
+    <string name="octocat">Octocat</string>
+
+    <string name="change_language_settings">Ubah Pengaturan Bahasa</string>
+</resources>
